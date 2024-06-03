@@ -44,9 +44,11 @@
 
         // KML URL with username and password
         var kmlUrl = 'https://USERNAME:abodyinmotion@share.garmin.com/Feed/ShareLoader/NDB92';
-
+        // Use CorsProxy.io
+        var corsProxy = 'https://corsproxy.io/?';
+        var proxyKmlUrl = corsProxy + encodeURIComponent(kmlUrl);
         // Load the KML file
-        omnivore.kml(kmlUrl).addTo(map);
+        omnivore.kml(proxyKmlUrl).addTo(map);
 
         // Optionally, handle any errors
         omnivore.kml(kmlUrl).on('ready', function() {
