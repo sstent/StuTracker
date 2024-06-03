@@ -52,7 +52,8 @@
         }).addTo(map);
 
         // KML URL with username and password
-        var kmlUrl = 'https://USERNAME:abodyinmotion@share.garmin.com/Feed/Share/NDB92';
+        //var kmlUrl = 'https://USERNAME:abodyinmotion@share.garmin.com/Feed/Share/NDB92';
+        var kmlUrl = 'https://share.garmin.com/Feed/Share/NDB92';
 
         // Use CorsProxy.io to handle CORS for the KML file
         var corsProxy = 'https://corsproxy.io/?';
@@ -63,7 +64,7 @@
 
 
 // Load the KML file and customize the marker icon
-        var kmlLayer = omnivore.kml(proxyKmlUrl, null, L.geoJSON(null, {
+        var kmlLayer = omnivore.kml(kmlUrl, null, L.geoJSON(null, {
             pointToLayer: function (feature, latlng) {
                 return L.marker(latlng, {
                     icon: L.icon({
