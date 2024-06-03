@@ -88,14 +88,37 @@
         }
         
 // Fetch KML file metadata to get the update time
-        fetch(kmlUrl)
+        fetch(kmlURL)
             .then(response => response.text())
             .then(data => {
                 var parser = new DOMParser();
-                var kmlDoc = parser.parseFromString(data, 'text/xml');
-                var updateTime = kmlDoc.querySelector('updated').textContent;
-                var timeDifference = getTimeDifference(updateTime);
-                document.getElementById('banner').innerText = `Last updated: ${timeDifference} minutes ago`;
+                var kmlDoc = parser.parseFromString(data, 'application/xml');
+
+                // Try to find the update time
+                var updateTime;
+                var timeStamp = kmlDoc.querySelector('TimeStamp > when');
+                if (timeStamp) {
+                    updateTime = timeStamp.textContent;
+                } else {
+                    var updated = kmlDoc.querySelector('updated');
+                    if (updated) {
+                        updateTime = updated.textContent;
+                    }
+                }
+
+                if (updateTime) {
+                    var timeDifference = getTimeDifference(updateTime);
+                    document.getElementById('banner').innerText = `Last updated: ${timeDifference} minutes ago`;
+                } else {
+                    document.getElementById('banner').innerText = 'Update time not found in KML file';
+                }
+
+                var kmlLayer = new L.KML(data);
+                map.addLayer(kmlLayer);
+
+                // Adjust the map to fit the KML layer
+                var bounds = kmlLayer.getBounds();
+                map.fitBounds(bounds);
             })
             .catch(error => console.error('Error fetching KML:', error));
 
