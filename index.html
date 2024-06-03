@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Google Map with KML Data</title>
+    <title>OpenStreetMap with KML Data</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         /* Ensure the map container takes up the full page */
         #map {
@@ -19,31 +21,34 @@
             padding: 0;
         }
     </style>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
-    <script>
-        function initMap() {
-            // Create the map centered at a specific location
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 0, lng: 0},
-                zoom: 2
-            });
-
-            // Load the KML file
-            var kmlLayer = new google.maps.KmlLayer({
-                url: 'https://share.garmin.com/Feed/Share/NDB92',
-                map: map
-            });
-
-            // Handle KML layer errors
-            kmlLayer.addListener('status_changed', function() {
-                if (kmlLayer.getStatus() !== 'OK') {
-                    alert('Failed to load KML: ' + kmlLayer.getStatus());
-                }
-            });
-        }
-    </script>
+    <!-- Include Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Include Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Include KML plugin for Leaflet -->
+    <script src="https://unpkg.com/leaflet-omnivore"></script>
 </head>
-<body onload="initMap()">
+<body>
     <div id="map"></div>
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([0, 0], 2);
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Load the KML file
+        omnivore.kml('https://share.garmin.com/Feed/Share/NDB92').addTo(map);
+
+        // Optionally, handle any errors (omnivore doesn't have built-in error handling)
+        omnivore.kml('https://share.garmin.com/Feed/Share/NDB92').on('ready', function() {
+            console.log('KML loaded successfully');
+        }).on('error', function() {
+            alert('Failed to load KML');
+        });
+    </script>
 </body>
 </html>
