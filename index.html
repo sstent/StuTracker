@@ -108,9 +108,9 @@
 
                 if (updateTime) {
                     var timeDifference = getTimeDifference(updateTime);
-                    document.getElementById('banner').innerText = `Last updated: ${timeDifference} minutes ago`;
+                    document.getElementById('banner').innerText = `StuTracker - Location Last updated: ${timeDifference} minutes ago`;
                 } else {
-                    document.getElementById('banner').innerText = 'Update time not found in KML file';
+                    document.getElementById('banner').innerText = 'StuTracker - Update time not found';
                 }
 
                 var kmlLayer = omnivore.kml(kmlUrl, null, L.geoJSON(null, {
