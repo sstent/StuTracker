@@ -88,8 +88,6 @@
                 endIconUrl: 'https://leafletjs.com/docs/images/marker-icon.png',
                 shadowUrl: 'https://leafletjs.com/docs/images/marker-shadow.png'
             }
-        }).on('loaded', function(e) {
-            map.fitBounds(e.target.getBounds());
         }).addTo(map);
 
         // Optionally, handle any errors
