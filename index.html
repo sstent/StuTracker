@@ -65,19 +65,19 @@
 
 
 // Load the KML file and customize the marker icon
-        var kmlLayer = omnivore.kml(kmlUrl, null, L.geoJSON(null, {
-            pointToLayer: function (feature, latlng) {
-                return L.marker(latlng, {
-                    icon: L.icon({
-                        iconUrl: 'images/marker-icon-2x.png',
-                        iconSize: [25, 41], // size of the icon
-                        iconAnchor: [12, 41], // point of the icon which will correspond to marker's location
-                        popupAnchor: [1, -34], // point from which the popup should open relative to the iconAnchor
-                        shadowSize: [41, 41] // size of the shadow
-                    })
-                });
-            }
-        })).addTo(map);
+        // var kmlLayer = omnivore.kml(kmlUrl, null, L.geoJSON(null, {
+        //     pointToLayer: function (feature, latlng) {
+        //         return L.marker(latlng, {
+        //             icon: L.icon({
+        //                 iconUrl: 'images/marker-icon-2x.png',
+        //                 iconSize: [25, 41], // size of the icon
+        //                 iconAnchor: [12, 41], // point of the icon which will correspond to marker's location
+        //                 popupAnchor: [1, -34], // point from which the popup should open relative to the iconAnchor
+        //                 shadowSize: [41, 41] // size of the shadow
+        //             })
+        //         });
+        //     }
+        // })).addTo(map);
 
         // Function to calculate time difference in minutes
         function getTimeDifference(updatedTime) {
@@ -113,8 +113,19 @@
                     document.getElementById('banner').innerText = 'Update time not found in KML file';
                 }
 
-                var kmlLayer = new L.KML(data);
-                map.addLayer(kmlLayer);
+                var kmlLayer = omnivore.kml(kmlUrl, null, L.geoJSON(null, {
+                            pointToLayer: function (feature, latlng) {
+                                return L.marker(latlng, {
+                                    icon: L.icon({
+                                        iconUrl: 'images/marker-icon-2x.png',
+                                        iconSize: [25, 41], // size of the icon
+                                        iconAnchor: [12, 41], // point of the icon which will correspond to marker's location
+                                        popupAnchor: [1, -34], // point from which the popup should open relative to the iconAnchor
+                                        shadowSize: [41, 41] // size of the shadow
+                                    })
+                                });
+                            }
+                        })).addTo(map);
 
                 // Adjust the map to fit the KML layer
                 var bounds = kmlLayer.getBounds();
