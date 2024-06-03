@@ -88,7 +88,7 @@
         }
         
 // Fetch KML file metadata to get the update time
-        fetch(kmlURL)
+        fetch(kmlUrl)
             .then(response => response.text())
             .then(data => {
                 var parser = new DOMParser();
