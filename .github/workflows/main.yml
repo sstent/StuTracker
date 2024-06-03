@@ -1,9 +1,9 @@
-name: Grab NYT Sudoku
+name: Grab latest KML file
 on:
   workflow_dispatch:
   schedule:
     # https://crontab.guru/every-day
-    - cron: "30 * * * *"
+    - cron: "/30 * * * *"
 jobs:
   writeData:
     runs-on: ubuntu-latest
