@@ -41,13 +41,17 @@
         }).addTo(map);
 
         // Replace the following URL with your actual KML URL and credentials
-        var kmlUrl = 'https://share.garmin.com/Feed/ShareLoader/NDB92';
+        var kmlUrl = 'https://USERNAME:PASSWORD@URL_OF_YOUR_KML_FILE';
+
+        // Use a CORS proxy
+        var corsProxy = 'https://cors-anywhere.herokuapp.com/';
+        var proxyKmlUrl = corsProxy + kmlUrl;
 
         // Load the KML file
-        omnivore.kml(kmlUrl).addTo(map);
+        omnivore.kml(proxyKmlUrl).addTo(map);
 
         // Optionally, handle any errors
-        omnivore.kml(kmlUrl).on('ready', function() {
+        omnivore.kml(proxyKmlUrl).on('ready', function() {
             console.log('KML loaded successfully');
         }).on('error', function() {
             alert('Failed to load KML');
