@@ -1,0 +1,21 @@
+name: Grab NYT Sudoku
+on:
+  workflow_dispatch:
+  schedule:
+    # https://crontab.guru/every-day
+    - cron: "30 * * * *"
+jobs:
+  writeData:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout main branch
+        uses: actions/checkout@v2
+      - run: pip install wget
+      - run: wget --user=USERNAME --password=abodyinmotion -O NDB92 https://share.garmin.com/Feed/Share/NDB92
+      - run: git config --local user.email "action@github.com"
+      - run: git config --local user.name "GitHub Action"
+      - run: git add NDB92
+      - run: git commit -m "NDB92 updated"
+      - run: "git push https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git HEAD"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
