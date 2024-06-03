@@ -52,19 +52,20 @@
         }).addTo(map);
 
         // KML URL with username and password
-        var kmlUrl = 'https://USERNAME:abodyinmotion@share.garmin.com/Feed/Share/NDB92';
+        var kmlUrl = 'NDB92';
+        // var kmlUrl = 'https://USERNAME:abodyinmotion@share.garmin.com/Feed/Share/NDB92';
         //var kmlUrl = 'https://share.garmin.com/Feed/Share/NDB92';
 
         // Use CorsProxy.io to handle CORS for the KML file
-        var corsProxy = 'https://corsproxy.io/?';
-        var proxyKmlUrl = corsProxy + encodeURIComponent(kmlUrl);
+        //var corsProxy = 'https://corsproxy.io/?';
+        //var proxyKmlUrl = corsProxy + encodeURIComponent(kmlUrl);
 
         // Load the KML file
         //omnivore.kml(kmlUrl).addTo(map);
 
 
 // Load the KML file and customize the marker icon
-        var kmlLayer = omnivore.kml(proxyKmlUrl, null, L.geoJSON(null, {
+        var kmlLayer = omnivore.kml(kmlUrl, null, L.geoJSON(null, {
             pointToLayer: function (feature, latlng) {
                 return L.marker(latlng, {
                     icon: L.icon({
@@ -77,7 +78,26 @@
                 });
             }
         })).addTo(map);
-        
+
+                // GPX URL - Change 'croton.gpx' to the filename of your GPX file
+        var gpxUrl = 'croton.gpx';
+
+        // Load the GPX file
+        new L.GPX(gpxUrl, {
+            async: true,
+            marker_options: {
+                startIconUrl: 'https://leafletjs.com/docs/images/marker-icon.png',
+                endIconUrl: 'https://leafletjs.com/docs/images/marker-icon.png',
+                shadowUrl: 'https://leafletjs.com/docs/images/marker-shadow.png'
+            }
+        }).on('loaded', function(e) {
+            map.fitBounds(e.target.getBounds());
+        }).addTo(map);
+
+        // Optionally, handle any errors
+        new L.GPX(gpxUrl).on('error', function(error) {
+            console.error('Failed to load GPX:', error);
+        });
 
     </script>
 </body>
