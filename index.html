@@ -77,23 +77,7 @@
             }
         })).addTo(map);
         
-        // GPX URL - Change 'croton.gpx' to the filename of your GPX file
-        var gpxUrl = 'croton.gpx';
 
-        // Load the GPX file
-        new L.GPX(gpxUrl, {
-            async: true,
-            marker_options: {
-                startIconUrl: 'https://leafletjs.com/docs/images/marker-icon.png',
-                endIconUrl: 'https://leafletjs.com/docs/images/marker-icon.png',
-                shadowUrl: 'https://leafletjs.com/docs/images/marker-shadow.png'
-            }
-        }).addTo(map);
-
-        // Optionally, handle any errors
-        new L.GPX(gpxUrl).on('error', function(error) {
-            console.error('Failed to load GPX:', error);
-        });
     </script>
 </body>
 </html>
