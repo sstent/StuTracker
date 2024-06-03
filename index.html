@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>OpenStreetMap with KML Data</title>
+    <title>OpenStreetMap with KML and GPX Data</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -25,8 +25,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <!-- Include Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <!-- Include Leaflet Omnivore plugin -->
-    <script src="https://unpkg.com/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
+    <!-- Include Leaflet GPX plugin -->
+    <script src="https://unpkg.com/leaflet-gpx/gpx.js"></script>
 </head>
 <body>
     <div id="map"></div>
@@ -43,19 +43,34 @@
         // KML URL with username and password
         var kmlUrl = 'https://USERNAME:abodyinmotion@share.garmin.com/Feed/ShareLoader/NDB92';
 
-
-        // Use CorsProxy.io
-        var corsProxy = 'https://corsproxy.io/?';
-        var proxyKmlUrl = corsProxy + encodeURIComponent(kmlUrl);
-
         // Load the KML file
-        omnivore.kml(proxyKmlUrl).addTo(map);
+        omnivore.kml(kmlUrl).addTo(map);
 
         // Optionally, handle any errors
-        omnivore.kml(proxyKmlUrl).on('ready', function() {
+        omnivore.kml(kmlUrl).on('ready', function() {
             console.log('KML loaded successfully');
         }).on('error', function() {
             alert('Failed to load KML');
+        });
+
+        // GPX URL - Replace 'your_file.gpx' with the filename of your GPX file
+        var gpxUrl = 'croton.gpx';
+
+        // Load the GPX file
+        new L.GPX(gpxUrl, {
+            async: true,
+            marker_options: {
+                startIconUrl: 'https://leafletjs.com/docs/images/marker-icon.png',
+                endIconUrl: 'https://leafletjs.com/docs/images/marker-icon.png',
+                shadowUrl: 'https://leafletjs.com/docs/images/marker-shadow.png'
+            }
+        }).on('loaded', function(e) {
+            map.fitBounds(e.target.getBounds());
+        }).addTo(map);
+
+        // Optionally, handle any errors
+        new L.GPX(gpxUrl).on('error', function(error) {
+            console.error('Failed to load GPX:', error);
         });
     </script>
 </body>
