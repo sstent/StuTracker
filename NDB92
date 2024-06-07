@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <kml xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>KML Export 6/7/2024 10:34:35 PM</name>
+    <name>KML Export 6/7/2024 11:05:51 PM</name>
     <Style id="style_emergency">
       <IconStyle>
         <colorMode>normal</colorMode>
@@ -52,18 +52,18 @@
         <visibility>true</visibility>
         <description />
         <TimeStamp>
-          <when>2024-06-07T22:28:30Z</when>
+          <when>2024-06-07T22:38:30Z</when>
         </TimeStamp>
         <styleUrl>#style_3519548</styleUrl>
         <ExtendedData>
           <Data name="Id">
-            <value>723961621</value>
+            <value>723967268</value>
           </Data>
           <Data name="Time UTC">
-            <value>6/7/2024 10:28:30 PM</value>
+            <value>6/7/2024 10:38:30 PM</value>
           </Data>
           <Data name="Time">
-            <value>6/7/2024 6:28:30 PM</value>
+            <value>6/7/2024 6:38:30 PM</value>
           </Data>
           <Data name="Name">
             <value>Stuart Stent</value>
@@ -81,16 +81,16 @@
             <value />
           </Data>
           <Data name="Latitude">
-            <value>41.174751</value>
+            <value>41.174805</value>
           </Data>
           <Data name="Longitude">
-            <value>-73.897861</value>
+            <value>-73.897841</value>
           </Data>
           <Data name="Elevation">
-            <value>34.82 m from MSL</value>
+            <value>30.76 m from MSL</value>
           </Data>
           <Data name="Velocity">
-            <value>1.0 km/h</value>
+            <value>2.0 km/h</value>
           </Data>
           <Data name="Course">
             <value>315.00 ° True</value>
@@ -105,7 +105,7 @@
             <value />
           </Data>
           <Data name="Event">
-            <value>Tracking message received.</value>
+            <value>Tracking interval received.</value>
           </Data>
           <Data name="Device Identifier">
             <value />
@@ -117,7 +117,7 @@
         <Point>
           <extrude>false</extrude>
           <altitudeMode>absolute</altitudeMode>
-          <coordinates>-73.897861,41.174751,34.82</coordinates>
+          <coordinates>-73.897841,41.174805,30.76</coordinates>
         </Point>
       </Placemark>
       <Placemark>
@@ -127,7 +127,7 @@
         <styleUrl>#linestyle_3519548</styleUrl>
         <LineString>
           <tessellate>true</tessellate>
-          <coordinates>-73.897861,41.174751,34.82</coordinates>
+          <coordinates>-73.897841,41.174805,30.76</coordinates>
         </LineString>
       </Placemark>
     </Folder>
