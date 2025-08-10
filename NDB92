@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <kml xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>KML Export 8/10/2025 1:14:24 PM</name>
+    <name>KML Export 8/10/2025 1:40:43 PM</name>
     <Style id="style_emergency">
       <IconStyle>
         <colorMode>normal</colorMode>
@@ -52,18 +52,18 @@
         <visibility>true</visibility>
         <description />
         <TimeStamp>
-          <when>2024-07-13T18:23:15Z</when>
+          <when>2025-08-10T13:36:15Z</when>
         </TimeStamp>
         <styleUrl>#style_3519548</styleUrl>
         <ExtendedData>
           <Data name="Id">
-            <value>737881699</value>
+            <value>864932775</value>
           </Data>
           <Data name="Time UTC">
-            <value>7/13/2024 6:23:15 PM</value>
+            <value>8/10/2025 1:36:15 PM</value>
           </Data>
           <Data name="Time">
-            <value>7/13/2024 2:23:15 PM</value>
+            <value>8/10/2025 9:36:15 AM</value>
           </Data>
           <Data name="Name">
             <value>Stuart Stent</value>
@@ -81,13 +81,13 @@
             <value />
           </Data>
           <Data name="Latitude">
-            <value>42.364483</value>
+            <value>34.152310</value>
           </Data>
           <Data name="Longitude">
-            <value>-73.594536</value>
+            <value>-117.715308</value>
           </Data>
           <Data name="Elevation">
-            <value>134.69 m from MSL</value>
+            <value>637.80 m from MSL</value>
           </Data>
           <Data name="Velocity">
             <value>0.0 km/h</value>
@@ -105,7 +105,7 @@
             <value />
           </Data>
           <Data name="Event">
-            <value>Tracking turned off from device.</value>
+            <value>Tracking message received.</value>
           </Data>
           <Data name="Device Identifier">
             <value />
@@ -117,7 +117,7 @@
         <Point>
           <extrude>false</extrude>
           <altitudeMode>absolute</altitudeMode>
-          <coordinates>-73.594536,42.364483,134.69</coordinates>
+          <coordinates>-117.715308,34.15231,637.8</coordinates>
         </Point>
       </Placemark>
       <Placemark>
@@ -127,7 +127,7 @@
         <styleUrl>#linestyle_3519548</styleUrl>
         <LineString>
           <tessellate>true</tessellate>
-          <coordinates>-73.594536,42.364483,134.69</coordinates>
+          <coordinates>-117.715308,34.15231,637.8</coordinates>
         </LineString>
       </Placemark>
     </Folder>
