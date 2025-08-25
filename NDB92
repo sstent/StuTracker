@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <kml xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>KML Export 8/25/2025 4:07:54 PM</name>
+    <name>KML Export 8/25/2025 4:40:26 PM</name>
     <Style id="style_emergency">
       <IconStyle>
         <colorMode>normal</colorMode>
@@ -52,18 +52,18 @@
         <visibility>true</visibility>
         <description />
         <TimeStamp>
-          <when>2025-08-25T15:59:00Z</when>
+          <when>2025-08-25T16:29:00Z</when>
         </TimeStamp>
         <styleUrl>#style_3519548</styleUrl>
         <ExtendedData>
           <Data name="Id">
-            <value>871377816</value>
+            <value>871390487</value>
           </Data>
           <Data name="Time UTC">
-            <value>8/25/2025 3:59:00 PM</value>
+            <value>8/25/2025 4:29:00 PM</value>
           </Data>
           <Data name="Time">
-            <value>8/25/2025 11:59:00 AM</value>
+            <value>8/25/2025 12:29:00 PM</value>
           </Data>
           <Data name="Name">
             <value>Stuart Stent</value>
@@ -81,19 +81,19 @@
             <value />
           </Data>
           <Data name="Latitude">
-            <value>34.153265</value>
+            <value>34.146216</value>
           </Data>
           <Data name="Longitude">
-            <value>-117.722818</value>
+            <value>-117.712261</value>
           </Data>
           <Data name="Elevation">
-            <value>719.46 m from MSL</value>
+            <value>550.50 m from MSL</value>
           </Data>
           <Data name="Velocity">
             <value>6.0 km/h</value>
           </Data>
           <Data name="Course">
-            <value>135.00 ° True</value>
+            <value>202.50 ° True</value>
           </Data>
           <Data name="Valid GPS Fix">
             <value>True</value>
@@ -117,7 +117,7 @@
         <Point>
           <extrude>false</extrude>
           <altitudeMode>absolute</altitudeMode>
-          <coordinates>-117.722818,34.153265,719.46</coordinates>
+          <coordinates>-117.712261,34.146216,550.5</coordinates>
         </Point>
       </Placemark>
       <Placemark>
@@ -127,7 +127,7 @@
         <styleUrl>#linestyle_3519548</styleUrl>
         <LineString>
           <tessellate>true</tessellate>
-          <coordinates>-117.722818,34.153265,719.46</coordinates>
+          <coordinates>-117.712261,34.146216,550.5</coordinates>
         </LineString>
       </Placemark>
     </Folder>
