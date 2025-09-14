@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <kml xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>KML Export 9/14/2025 2:34:40 PM</name>
+    <name>KML Export 9/14/2025 3:05:54 PM</name>
     <Style id="style_emergency">
       <IconStyle>
         <colorMode>normal</colorMode>
@@ -52,18 +52,18 @@
         <visibility>true</visibility>
         <description />
         <TimeStamp>
-          <when>2025-09-14T14:32:00Z</when>
+          <when>2025-09-14T15:02:00Z</when>
         </TimeStamp>
         <styleUrl>#style_3519548</styleUrl>
         <ExtendedData>
           <Data name="Id">
-            <value>880653204</value>
+            <value>880666665</value>
           </Data>
           <Data name="Time UTC">
-            <value>9/14/2025 2:32:00 PM</value>
+            <value>9/14/2025 3:02:00 PM</value>
           </Data>
           <Data name="Time">
-            <value>9/14/2025 10:32:00 AM</value>
+            <value>9/14/2025 11:02:00 AM</value>
           </Data>
           <Data name="Name">
             <value>Stuart Stent</value>
@@ -81,16 +81,16 @@
             <value />
           </Data>
           <Data name="Latitude">
-            <value>34.159411</value>
+            <value>34.169496</value>
           </Data>
           <Data name="Longitude">
-            <value>-117.713226</value>
+            <value>-117.696961</value>
           </Data>
           <Data name="Elevation">
-            <value>687.14 m from MSL</value>
+            <value>918.25 m from MSL</value>
           </Data>
           <Data name="Velocity">
-            <value>11.1 km/h</value>
+            <value>6.0 km/h</value>
           </Data>
           <Data name="Course">
             <value>67.50 ° True</value>
@@ -117,7 +117,7 @@
         <Point>
           <extrude>false</extrude>
           <altitudeMode>absolute</altitudeMode>
-          <coordinates>-117.713226,34.159411,687.14</coordinates>
+          <coordinates>-117.696961,34.169496,918.25</coordinates>
         </Point>
       </Placemark>
       <Placemark>
@@ -127,7 +127,7 @@
         <styleUrl>#linestyle_3519548</styleUrl>
         <LineString>
           <tessellate>true</tessellate>
-          <coordinates>-117.713226,34.159411,687.14</coordinates>
+          <coordinates>-117.696961,34.169496,918.25</coordinates>
         </LineString>
       </Placemark>
     </Folder>
