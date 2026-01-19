@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <kml xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>KML Export 1/19/2026 4:44:49 PM</name>
+    <name>KML Export 1/19/2026 5:09:40 PM</name>
     <Style id="style_emergency">
       <IconStyle>
         <colorMode>normal</colorMode>
@@ -52,18 +52,18 @@
         <visibility>true</visibility>
         <description />
         <TimeStamp>
-          <when>2026-01-19T16:38:00Z</when>
+          <when>2026-01-19T17:08:00Z</when>
         </TimeStamp>
         <styleUrl>#style_3519548</styleUrl>
         <ExtendedData>
           <Data name="Id">
-            <value>919214808</value>
+            <value>919222060</value>
           </Data>
           <Data name="Time UTC">
-            <value>1/19/2026 4:38:00 PM</value>
+            <value>1/19/2026 5:08:00 PM</value>
           </Data>
           <Data name="Time">
-            <value>1/19/2026 11:38:00 AM</value>
+            <value>1/19/2026 12:08:00 PM</value>
           </Data>
           <Data name="Name">
             <value>Stuart Stent</value>
@@ -81,13 +81,13 @@
             <value />
           </Data>
           <Data name="Latitude">
-            <value>34.161740</value>
+            <value>34.169421</value>
           </Data>
           <Data name="Longitude">
-            <value>-117.711253</value>
+            <value>-117.698035</value>
           </Data>
           <Data name="Elevation">
-            <value>719.46 m from MSL</value>
+            <value>916.04 m from MSL</value>
           </Data>
           <Data name="Velocity">
             <value>5.0 km/h</value>
@@ -117,7 +117,7 @@
         <Point>
           <extrude>false</extrude>
           <altitudeMode>absolute</altitudeMode>
-          <coordinates>-117.711253,34.16174,719.46</coordinates>
+          <coordinates>-117.698035,34.169421,916.04</coordinates>
         </Point>
       </Placemark>
       <Placemark>
@@ -127,7 +127,7 @@
         <styleUrl>#linestyle_3519548</styleUrl>
         <LineString>
           <tessellate>true</tessellate>
-          <coordinates>-117.711253,34.16174,719.46</coordinates>
+          <coordinates>-117.698035,34.169421,916.04</coordinates>
         </LineString>
       </Placemark>
     </Folder>
